@@ -7,7 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  precoAlcool = ""
+  precoGasolina = ""
+  public resultado: String = ""
+
   constructor() {}
+
+  ngOnInit(){
+    this.calcular()
+  }
 
   calcular(){
 
@@ -28,9 +36,5 @@ export class HomePage {
       this.resultado = "Os campos não foram preenchidos corretamente"
     }
   }
-
-  precoAlcool = ""
-  precoGasolina = ""
-  public resultado: String = ""
 
 }
