@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +11,10 @@ export class HomePage {
   precoGasolina = ""
   public resultado: String = ""
 
-  constructor(private ngZone: NgZone) {}
+  constructor() {}
 
   ngOnInit(){
-    this.resultado = ""
+    
   }
 
   calcular(){
@@ -35,8 +35,6 @@ export class HomePage {
     else{
       this.resultado = "Os campos não foram preenchidos corretamente"
     }
-
-    this.ngZone.run(() => {});
   }
 
 }
