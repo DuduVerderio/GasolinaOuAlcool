@@ -14,7 +14,7 @@ export class HomePage {
   constructor() {}
 
   ngOnInit(){
-    this.calcular()
+    this.resultado = ""
   }
 
   calcular(){
