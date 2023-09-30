@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,7 @@ export class HomePage {
   precoGasolina = ""
   public resultado: String = ""
 
-  constructor() {}
+  constructor(private cdRef: ChangeDetectorRef) {}
 
   ngOnInit(){
     this.resultado = ""
@@ -35,6 +35,8 @@ export class HomePage {
     else{
       this.resultado = "Os campos não foram preenchidos corretamente"
     }
+
+    this.cdRef.detectChanges();
   }
 
 }
